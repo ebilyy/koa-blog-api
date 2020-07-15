@@ -8,7 +8,7 @@ app.use(serve(__dirname+ '/public'))
 app.use(bodyParser());
 app.use(router.middleware())
 
-
-app.listen(3000, ()=>{
-  console.log('server started');
+const port = process.env.PORT || 3000
+app.listen(port, ()=>{
+  console.log(`server listening on port ${port}`);
 });

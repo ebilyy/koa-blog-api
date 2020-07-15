@@ -7,7 +7,11 @@ const getAll = async (ctx, next)=> {
 }
 
 const getById = async (ctx, next) => {
-
+  const id = ctx.params.id
+  console.log(id);
+  ctx.body = {
+    id
+  }
 }
 
 const create = async (ctx, next) => {
