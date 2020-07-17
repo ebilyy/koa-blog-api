@@ -1,4 +1,3 @@
-// const ArticleModel = require()
 
 const getAll = async (ctx, next)=> {
   ctx.body = {
