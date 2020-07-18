@@ -1,3 +1,4 @@
+const Post = require('../models/post')
 
 const getAll = async (ctx, next)=> {
   ctx.body = {
@@ -14,7 +15,16 @@ const getById = async (ctx, next) => {
 }
 
 const create = async (ctx, next) => {
-
+  let post
+  try {
+    post = await Post.create(ctx.request.body).catch((err) => {
+      return next({ status: 400, message: err.message })
+    })
+  } catch (error) {
+    console.log(error)
+    return next({ status: 400, message: error.message })
+  }
+  return res.json(post)
 }
 const update = async (ctx, next) => {
 
