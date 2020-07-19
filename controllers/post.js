@@ -8,7 +8,16 @@ const getAll = async (ctx, next)=> {
 
 const getById = async (ctx, next) => {
   const id = ctx.params.id
-  console.log(id);
+
+  let post
+  try {
+    post = Post.findOne({ slug: id })
+  } catch (error) {
+
+    console.log(error)
+    return next({ status: 400, message: error.message })
+  }
+  ctx.json(post)
   ctx.body = {
     id
   }

@@ -1,6 +1,6 @@
 const Router = require('@koa/router');
 const router = new Router({prefix: '/api'});
-const controller = require('../controllers/article')
+const controller = require('../controllers/post')
 
 
 

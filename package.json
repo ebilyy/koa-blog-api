@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "PORT=9000 node index.js"
+    "start": "node ./app/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@koa/router": "^9.3.1",
+    "config": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "keymirror": "^0.1.1",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-static": "^5.0.0",

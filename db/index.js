@@ -1,12 +1,10 @@
-const config = {
-  dbUser: `eugene`,
-  pass: `111111qq`
-}
+const config = require('config')
 const mongoose = require('mongoose')
-
+const DB_USER = config.get('DB_USER')
+const DB_PASS = config.get('DB_PASS')
 const runDb = () => {
   const client = mongoose.connect(
-    `mongodb://$eugene:111111qq@ds213968.mlab.com:13968/blog`,
+    `mongodb://${DB_USER}:${DB_PASS}@ds213968.mlab.com:13968/blog`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
 
