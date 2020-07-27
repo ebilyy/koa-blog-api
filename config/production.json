@@ -1,6 +1,6 @@
 {
   "env": "Production",
   "mongo": {
-    "uri": "mongo-producction"
+    "uri": "mongo-production"
   }
 }
