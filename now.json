@@ -1,7 +1,0 @@
-{
-  "name": "my-mongodb-api",
-  "version": 2,
-  "env": {
-    "DB_URL": "@my-mongodb-uri"
-  }
-}
