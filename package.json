@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./app/index.js",
-    "vercel-build": "node ./build.js"
+    "vercel-build": "node ./app/index.js"
   },
   "engines": {
     "node": "12.x"
