@@ -1,10 +1,21 @@
 const Koa = require("koa");
-const initConnectors = require("../db");
 
-const initHandlers = require("./handlers");
+const koaNunjucks = require("koa-nunjucks-2");
+const path = require("path");
+
+const initConnectors = require("../db");
 
 initConnectors();
 const app = new Koa();
-initHandlers(app);
+
+app.use(
+  koaNunjucks({
+    ext: "html",
+    path: path.join(__dirname, "views"),
+    nunjucksConfig: {
+      trimBlocks: true,
+    },
+  })
+);
 
 module.exports = app;
