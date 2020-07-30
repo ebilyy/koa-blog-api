@@ -1,10 +1,9 @@
 {
-  "name": "koa-blog-api",
-  "version": "2",
+  "version": 2,
   "builds": [
     {
       "src": "app/index.js",
-      "use": "@now/node-server"
+      "use": "@now/node"
     }
   ],
 
