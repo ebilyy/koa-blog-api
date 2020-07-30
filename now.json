@@ -1,4 +1,6 @@
 {
+  "name": "koa-blog-api",
+  "version": "2",
   "builds": [
     {
       "src": "app/index.js",
